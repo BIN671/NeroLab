@@ -1,7 +1,6 @@
 import FC.Layers as classes
 import FC.functions as functions
 import FC.error_func as error_func
-import math
 import random
 
 input_layer = classes.InputLayer(2)
@@ -38,7 +37,7 @@ for i in range(10000):
     y = random.randint(1, 2*n) / n
     #R = (x+y)+2*(x+y)+3*(x+6*y)+4
     R = x*4+y**2
-    model.learn([x, y], R, error_func.MSE, 0.001*(n**0.3))
+    model.learn([x, y], R, error_func.MSE, 0.001 * (n ** 0.3))
 
 #print(model.predict([10,3]))
 
